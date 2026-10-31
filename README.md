@@ -1,50 +1,54 @@
-# Аніме-каталог
+# Anime Catalog
 
-Тема WordPress для невеликого каталогу аніме: пошук за назвою, фільтри за жанром і роками, сортування, кнопка «Випадкове» та сторінка кожного тайтлу. Без реєстрації, коментарів та особистих кабінетів.
+A WordPress theme for a small anime catalog: search by title, filters by genre and decade, sorting, a "Random" button and a page for every title. No registration, comments or user accounts.
 
-## Можливості
+The site interface is in Ukrainian.
 
-- Тип запису **«Аніме»** з полями: японська та оригінальна назва, рік, епізоди, студія, оцінка, формат, статус, кольори обкладинки.
-- Таксономія **«Жанри»** зі сторінками `/genre/<жанр>/`.
-- Головна сторінка з каталогом і миттєвими фільтрами (без перезавантаження).
-- Сторінка тайтлу з фактами та блоком «Схоже за жанром».
-- Обкладинка-градієнт з японською назвою або власне «Зображення запису».
-- Під час першого запуску каталог заповнюється 16 демо-тайтлами та сторінкою «Про сайт».
+## Features
 
-## Встановлення
+- **Anime** custom post type with fields: Japanese and original title, year, episodes, studio, rating, format, status and cover colors.
+- **Genres** taxonomy with archive pages at `/genre/<genre>/`.
+- Front page with the catalog and instant client-side filters (no page reloads).
+- Title page with key facts and a "Similar by genre" block.
+- Gradient cover with the Japanese title, or your own featured image.
+- On first run, the catalog is populated with 16 demo titles and an "About" page.
 
-1. Встановіть WordPress (наприклад, локально через MAMP).
-2. Скопіюйте цю папку в `wp-content/themes/anime-catalog`.
-3. В адмінці: **Зовнішній вигляд → Теми** → активуйте «Аніме-каталог».
-   Або до встановлення WordPress додайте у `wp-config.php`:
+## Installation
+
+1. Install WordPress (for example, locally with MAMP).
+2. Copy this folder to `wp-content/themes/anime-catalog`.
+3. In the admin panel go to **Appearance → Themes** and activate "Аніме-каталог" (Anime Catalog).
+   Alternatively, before installing WordPress, add this line to `wp-config.php`:
    ```php
    define( 'WP_DEFAULT_THEME', 'anime-catalog' );
    ```
-4. Відкрийте головну сторінку: демо-контент і гарні посилання налаштуються автоматично.
+4. Open the front page: demo content and pretty permalinks are set up automatically.
 
-## Редагування
+## Editing content
 
-- Тайтли: **Аніме → Усі тайтли / Додати тайтл**
-- Жанри: **Аніме → Жанри**
-- Меню в шапці: **Зовнішній вигляд → Меню** (позиція «Головне меню»)
+Admin menu labels are in Ukrainian; the English meaning is given here.
 
-## Структура
+- Titles: **Аніме → Усі тайтли / Додати тайтл** (Anime → All titles / Add title)
+- Genres: **Аніме → Жанри** (Anime → Genres)
+- Header menu: **Appearance → Menus**, assigned to the "Головне меню" (Main menu) location
+
+## Structure
 
 ```
 anime-catalog/
-├── style.css               # заголовок теми та всі стилі
-├── functions.php           # тип запису, жанри, поля, хелпери
-├── inc/demo-content.php    # демо-тайтли та налаштування посилань
-├── front-page.php          # головна з каталогом
-├── archive-anime.php       # /catalog/
-├── taxonomy-genre.php      # сторінки жанрів
-├── single-anime.php        # сторінка тайтлу
-├── template-parts/catalog.php  # фільтри + сітка карток
-├── assets/catalog.js       # пошук, фільтри, сортування, «Випадкове»
-├── header.php, footer.php, page.php, index.php, 404.php
+├── style.css                   # theme header and all styles
+├── functions.php               # post type, genres, fields, helpers
+├── inc/demo-content.php        # demo titles and permalink setup
+├── front-page.php              # front page with the catalog
+├── archive-anime.php           # /catalog/
+├── taxonomy-genre.php          # genre pages
+├── single-anime.php            # title page
+├── template-parts/catalog.php  # filters + card grid
+├── assets/catalog.js           # search, filters, sorting, "Random"
+└── header.php, footer.php, page.php, index.php, 404.php
 ```
 
-## Примітки
+## Notes
 
-- Контент (тайтли, жанри) зберігається в базі даних WordPress, а не в репозиторії.
-- Оцінки орієнтовні; постери не включено, щоб не використовувати чужі зображення.
+- Content (titles, genres) is stored in the WordPress database, not in this repository.
+- Ratings are approximate; official posters are not included to avoid using third-party images.
